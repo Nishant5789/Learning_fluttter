@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'home_dart.dart';
+import 'package:flutter_application_1/pages/login_dart.dart';
+import 'pages/home_dart.dart';
 
 // entry point of execition
 void main() {
@@ -13,9 +14,31 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
+        themeMode: ThemeMode.light,
+
+        // if we choose dark theam then darktheme would be 
+        // execute and choose light then theme properties wokr
+
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.purple,
+          // primarySwatch is not a Color . It's MaterialColor . Which means it's different shades of a color a material app will use. primaryColor is one of those shades. To be exact, primaryColor is normally equal to primarySwatch[500]
+          brightness: Brightness.light
         ),
-        home: Homepage());
+
+        darkTheme: ThemeData( 
+          brightness: Brightness.dark,
+          primarySwatch: Colors.pink
+        ),
+
+        // home: Homepage(),
+        // either you specifed home properties of material or any page with path "/" in routes
+
+        initialRoute: "/",
+
+        routes: {
+          '/': (context) => Homepage(),
+          '/login': (context) => Loginpage(),
+        },
+    );
   }
 }
