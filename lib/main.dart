@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/login_dart.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_dart.dart';
 
 // entry point of execition
 void main() {
   runApp(MyApp());
-}
+} 
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -34,11 +35,11 @@ class MyApp extends StatelessWidget {
       // home: Homepage(),
       // either you specifed home properties of material or any page with path "/" in routes
 
-      initialRoute: "/login",
+      initialRoute: MyRoutes.loginRoute,
 
       routes: {
-        '/': (context) => Homepage(),
-        '/login': (context) => Loginpage(),
+        MyRoutes.homeRoute: (context) => Homepage(),
+        MyRoutes.loginRoute: (context) => Loginpage(),
       },
     );
   }
