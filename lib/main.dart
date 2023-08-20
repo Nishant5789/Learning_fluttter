@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
       // home: Homepage(),
       // either you specifed home properties of material or any page with path "/" in routes
 
-      initialRoute: MyRoutes.loginRoute,
+      initialRoute: MyRoutes.homeRoute,
 
       routes: {
         MyRoutes.homeRoute: (context) => Homepage(),

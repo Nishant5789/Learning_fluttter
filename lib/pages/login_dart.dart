@@ -96,19 +96,18 @@ class _LoginpageState extends State<Loginpage> {
                    ),
                         
                     const SizedBox(
-                      height: 40,
+                      height: 40, 
                     ),
                     Material(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.deepPurple,
-                      child: InkWell(
+                      child: InkWell( 
                         onTap: () => moveToHome(context),
                         child: AnimatedContainer(
                           duration: const Duration(seconds: 1),
                           width: changebutton ? 50:150,
                           height: 50,
                           alignment: Alignment.center,
-                          // color: Colors.deepPurple,
                           child: changebutton ? const Icon(
                             Icons.done,
                             color: Colors.white,
